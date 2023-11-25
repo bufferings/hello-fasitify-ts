@@ -1,11 +1,16 @@
-import Fastify from 'fastify'
+import Fastify from "fastify";
 
 const fastify = Fastify({
-  logger: true
-})
+  logger: true,
+});
 
-fastify.get('/', async (request, reply) => {
-  return 'Hi!'
-})
+fastify.get("/", async (request, reply) => {
+  return "Hi!";
+});
 
-await fastify.listen({ port: 3000 })
+try {
+  await fastify.listen({ port: 3000 });
+} catch (err) {
+  fastify.log.error(err);
+  process.exit(1);
+}
