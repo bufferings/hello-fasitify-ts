@@ -9,7 +9,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "fastify": "^4.24.3"
+    "fastify": "^4.24.3",
+    "fastify-plugin": "^4.5.1"
   },
   "type": "module",
   "devDependencies": {
